@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <style>
+        img {
+            width: 15%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img
+    id="button"    src="https://limitedrungames.com/cdn/shop/files/jet-set-radio-limited-run-games-pots-plush.png?v=1751054145&width=650">
+    <button>click this guy</button>
+<button id"upgrade">upgrade</button>
+
+</body>
+
+</html>
+<script>
+var score = 0
+document.getElementById("button").addEventListener("click", scoreGoUp)
+/* upgrade
+more clicks per click when you buy it for 100 score
+    */
+function scoreGoUp(){
+    score = score + 1
+}
+
+
+</script>
