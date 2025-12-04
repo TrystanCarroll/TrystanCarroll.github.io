@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>scuaere</title>
+</head>
+
+<body>
+
+  <canvas id="canvas" height="800" width="1000"></canvas>
+</body>
+
+</html>
+<style>
+
+</style>
+<script>
+
+  var canvas = document.getElementById("canvas")
+  var ctx = canvas.getContext("2d")
+  var y = [50, 100, 20, 29, 201, 47, 40, 30, 28, 90]
+  var x = [50, 100, 30, 40, 20, 60, 70, 80, 90, 10]
+  var directionY = [50, 100, 20, 29, 201, 47, 40, 30, 28, 90]
+  var directionX = [50, 100, 30, 40, 20, 60, 70, 80, 90, 10]
+
+  setInterval(moveBox, 50)
+  function moveBox() {
+    ctx.clearRect(0, 0, 2000, 2000)
+    for (var i = 0; i < 10; i = i + 1) {
+      ctx.fillRect(x[i], y[i], 20, 20)
+      y[i] = y[i] + directionY[i]
+      x[i] = x[i] + directionX[i]
+      if (y[i] > 500) {
+        directionY[i] = -directionY[i]
+      }
+      //make box bounce again (if box position = barrier position/ change direction when box hits wall) + different direction
+      //direction not changing to topright an bottomleft
+      if (y[i] < 0) {
+        directionY[i] = -directionY[i]
+      }
+      if (x[i] > 1000) {
+        directionX[i] = -directionX[i]
+      }
+      if (x[i] < 0) {
+        directionX[i] = -directionX[i]
+      }
+    }
+    ctx.fillRect(x[0], y[0], 20, 20)
+    //make box bounce (if box position = barrier position/ change direction when box hits wall)
+    y[0] = y[0] + directionY[0]
+    x[0] = x[0] + directionX[0]
+
+    if (y[0] > 500) {
+      directionY[0] = -directionY[0]
+    }
+    //make box bounce again (if box position = barrier position/ change direction when box hits wall) + different direction
+    //direction not changing to topright an bottomleft
+    if (y[0] < 0) {
+      directionY[0] = -directionY[0]
+    }
+    if (x[0] > 1000) {
+      directionX[0] = -directionX[0]
+    }
+    if (x[0] < 0) {
+      directionX[0] = -directionX[0]
+    }
+    ctx.clearRect(x[1], y[1], 2000, 2000)
+    ctx.fillRect(x[1], y[1], 20, 20)
+    x[1] = x[1] + directionX[1]
+    y[1] = y[1] + directionY[1]
+  }
+
+</script>

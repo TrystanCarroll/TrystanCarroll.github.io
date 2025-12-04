@@ -166,11 +166,10 @@
             //createPlatform(x,y,width,height)
             createPlatform(800, 700, 100, 150)
             createPlatform(50, 450, 100, 50)
-createPlatform(500, 600, 100, 100)
-createPlatform(500, 600, 100, 100)
-createPlatform(700, 250, 100, 100)
-createPlatform()
-createPlatform(400, 400, 100, 50)
+            createPlatform(500, 600, 100, 100)
+            createPlatform(500, 600, 100, 100)
+            createPlatform(700, 250, 100, 100)
+            createPlatform(400, 400, 100, 50)
             //create cannons
             //you pick the wall you want the cannon on, then the position, then the time between shots in milliseconds
             // your wall choices are: 'top' 'left' 'right' or 'bottom'
@@ -179,9 +178,8 @@ createPlatform(400, 400, 100, 50)
 
             //create collectables
             //createCollectable("www.pictureOfFish.jpg",59,299)
-            createCollectable("https://upload.wikimedia.org/wikipedia/commons/b/bd/Test.svg", 630, 100)
-createCollectable("https://tse1.mm.bing.net/th/id/OIP.q9V30DjodBPzXxKYYc7G3QHaHa?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3", 700, 100)
             
+
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             //////////////////////////ONLY CHANGE ABOVE THIS POINT//////////////////////////////////////////////////////////////////
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -468,9 +466,9 @@ createCollectable("https://tse1.mm.bing.net/th/id/OIP.q9V30DjodBPzXxKYYc7G3QHaHa
             ctx.fillRect(canvas.width / 4, canvas.height / 6, canvas.width / 2, canvas.height / 2)
             ctx.fillStyle = 'black'
             ctx.font = '800% serif'
-            ctx.fillText("Your're are dead womp womp", canvas.width / 4, canvas.height / 6 + canvas.height / 5, canvas.width / 16 * 14)
+            ctx.fillText("Your're are aliven't", canvas.width / 4, canvas.height / 6 + canvas.height / 5, canvas.width / 16 * 14)
             ctx.font = '500% serif'
-            ctx.fillText("hit the any key to unwomp womp", canvas.width / 4, canvas.height / 6 + canvas.height / 3, canvas.width / 5 * 18)
+            ctx.fillText("hit the any key to unaliven't", canvas.width / 4, canvas.height / 6 + canvas.height / 3, canvas.width / 5 * 18)
             if (anyKeyPress) {
                 anyKeyPress = false
                 resetVariables()
@@ -702,7 +700,7 @@ createCollectable("https://tse1.mm.bing.net/th/id/OIP.q9V30DjodBPzXxKYYc7G3QHaHa
                     frameIndex = 4
                 }
             }
-             if (upPress) {
+            if (upPress) {
                 if (playerOnGround) { //this only lets you jump if you are on the ground
                     playerSpeedY = playerSpeedY - playerJumpStrength
                     jumpTimer = 19 //this counts how many frames to have the jump last. 
@@ -828,7 +826,7 @@ createCollectable("https://tse1.mm.bing.net/th/id/OIP.q9V30DjodBPzXxKYYc7G3QHaHa
             collectableX = []
             collectableY = []
             collectableType = []
-            collectableBounce = []            
+            collectableBounce = []
             collectableImages = []
 
             setupGame()
